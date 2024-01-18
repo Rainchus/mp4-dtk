@@ -125,8 +125,8 @@ void BoardCreate(void) {
     lbl_1_bss_0->unk8 = BoardModelCreate(0x7000A, NULL, 0);
     BoardModelVisibilitySet(lbl_1_bss_0->unk8, 0);
     BoardSpaceWalkEventFuncSet(&fn_1_90C);
-    BoardSpaceWalkMiniEventFuncSet(&fn_1_91C);
-    BoardSpaceLandEventFuncSet(&fn_1_908);
+    BoardSpaceWalkMiniEventFuncSet((void*)&fn_1_91C);
+    BoardSpaceLandEventFuncSet((void*)&fn_1_908);
     fn_80083EDC(lbl_1_data_2C);
     fn_800A4F6C(lbl_1_data_32);
     BoardShopHostSet(lbl_1_data_2E);

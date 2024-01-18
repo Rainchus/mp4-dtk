@@ -3,10 +3,15 @@
 
 #include "dolphin.h"
 
+#ifndef _BOARD_SPACE_EVENT_FUNC
+#define _BOARD_SPACE_EVENT_FUNC
+typedef s32 (*BoardSpaceEventFunc)(void);
+#endif
+
 void BoardCameraTargetModelSet(s16 model); 
 void BoardCameraMotionStartEx(s16, Vec *, Vec *, f32, f32, s16); 
 void BoardCameraMotionWait(void);
-void BoardSpacePosGet(s32, s32, Vec*);
+s32 BoardSpacePosGet(s32, s32, Vec*);
 void BoardShopTutorialExec(s32);
 void fn_8007F894(void);
 s16 BoardStarHostMdlGet(void);
@@ -34,10 +39,10 @@ void BoardModelPosSetV(s16, Vec*);
 void BoardModelPosSet(s16, f32, f32, f32);
 void BoardModelRotSetV(s16 arg0, Vec* arg1);
 void BoardModelVisibilitySet(s16, s32);
-void BoardSpaceWalkEventFuncSet(void*);
-void BoardSpaceWalkMiniEventFuncSet(void*);
-void BoardSpaceLandEventFuncSet(void*);
-s32 BoardSpaceFlagSearch(s32, s32);
+void BoardSpaceWalkEventFuncSet(BoardSpaceEventFunc func);
+void BoardSpaceWalkMiniEventFuncSet(BoardSpaceEventFunc func);
+void BoardSpaceLandEventFuncSet(BoardSpaceEventFunc func);
+s32 BoardSpaceFlagSearch(s32, u32);
 void BoardSpaceInit(s32);
 void BoardSpaceDestroy(void);
 void BoardShopHostSet(s16);

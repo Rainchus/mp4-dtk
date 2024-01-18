@@ -10,14 +10,14 @@ REL/board_executor.c:
 	.text       start:0x00000000 end:0x000000E0
 
 REL/w03Dll/main.c:
-	.text       start:0x000000E0 end:0x000010E4
-	.rodata     start:0x00000000 end:0x00000030
+	.text       start:0x000000E0 end:0x000012C8
+	.rodata     start:0x00000000 end:0x00000038
 	.data       start:0x00000000 end:0x00000280
 	.bss        start:0x00000000 end:0x00000028
 
 REL/w03Dll/statue.c:
-	.text       start:0x000010E4 end:0x00003058
-	.rodata     start:0x00000030 end:0x000000D8
+	.text       start:0x000012C8 end:0x00003058
+	.rodata     start:0x00000038 end:0x000000D8
 	.data       start:0x00000280 end:0x00000310
 	.bss        start:0x00000028 end:0x00000070
 
